@@ -10,9 +10,7 @@ def b():
 
 def exerc94():
     listaT= []
-    pessoas = {}
-    mulher = []    
-    idademais = []
+    pessoas = {}   
 
     x = "S"
     n = 0
@@ -22,7 +20,8 @@ def exerc94():
     
     while x == "S":
         b()
-        pessoas["NOME"] = input(" NOME: ")
+        pessoas.clear()
+        pessoas["NOME"] = input(" NOME: ").upper()
         
         pessoas["SEXO"] = input(" SEXO [M/F]: ") #FDS A INCLUSÃO E OLHA QUE EU SOU BI SA POURA
         pessoas["SEXO"] = pessoas["SEXO"].upper()
@@ -30,7 +29,7 @@ def exerc94():
         if pessoas["SEXO"] == "M":
             n=1
         elif pessoas["SEXO"] == "F":
-            mulher.append(pessoas["NOME"])
+            n=2
         else :
             print("Por favor escolha M ou F seu gay safado")
             break
@@ -40,9 +39,10 @@ def exerc94():
         soma = soma + pessoas["IDADE"]
         print("\n")
         
-        listaT.append(pessoas)
-        
+        listaT.append(pessoas.copy())
+        print(listaT)
         y = input(" MAIS ALGUEM? [S/N]:")
+        y = y.upper()
         b()
         
         if y ==  "S":
@@ -55,12 +55,18 @@ def exerc94():
     b()
     print(f"B) A média de idade é: {soma/len(listaT):.0f}")
     b()
-    print(f"C) Uma lista com as mulheres :", end=" ")
-    for index in range(0,len(mulher)):
-        print(f"{mulher[index]} ", end=" ")
+    print(f"C) Uma lista com as mulheres:", end=" ")
+    for s in listaT:
+        if s["SEXO"] == "F":
+            print(f'{s["NOME"]}, ', end="")
     print("")
+        
     b()
-    print("D) Uma lista de pessoas com idade acima da média" , end="")
-
+    print("D) Uma lista de pessoas com idade acima da média:" , end=" ")
+    for p in listaT:
+        if p["IDADE"] >= media:
+            print(f'{p["NOME"]}, ', end="")
+    print("")
+    
     
 exerc94()
