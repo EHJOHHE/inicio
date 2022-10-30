@@ -1,0 +1,143 @@
+header{
+    background:purple;
+    margin-top: -10px;
+    margin-left: -10px;
+    width: 110%;
+    height: 80px;
+    display: flex;
+
+}
+
+.entrar{
+    background-color: white;
+    font-weight: bold;
+    width: 100px;
+    height: 35px;
+    border-width: 0px;
+    border-radius: 10px;
+    margin-left: 1210px;
+    margin-top: -60px;
+    display: block;
+    
+}
+
+.entrar:hover{
+    background-color: palevioletred;
+    color: white;
+
+}  
+
+.cabeça{
+    margin-left: 10px;
+    color: white;
+
+}
+
+.barra{
+    display: flex;
+    background-color: black;
+    width: 110%;
+    height: 40px;
+    margin-left: -10px;
+    
+    
+}
+
+
+.home{
+    font-size: 20px;
+    background-color: black;
+    width: 0px;
+    height: 0px;
+    color: white;
+    margin-left: 550px;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.sobre{
+    font-size: 20px;
+    background-color: black;
+    width: 0px;
+    height: 0px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 50px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.inicio{
+    font-size: 20px;
+    background-color: black;
+    width: 0px;
+    height: 0px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 50px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.home:hover{
+    color: purple;
+    font-size: 22px;
+    margin-right:5px;
+    transition: 0.8s;
+    margin-top: 12px;
+
+}
+
+.sobre:hover{
+    color: purple;
+    font-size: 22px;
+    margin-right: 5px;
+    transition: 0.8s;
+    margin-top: 12px;
+
+}
+
+.inicio:hover{
+    color: purple;
+    font-size: 22px;
+    transition: 0.8s;
+    margin-top: 12px;
+}
+
+.titulo{
+    font-family:'Times New Roman', Times, serif ;
+    color: gray;
+    margin-left: 400px;
+    margin-top: 120px;
+}
+
+.lixeira{
+    width: 20px;
+    height: 20px;
+}
+
+.editar{
+    width: 20px;
+    height: 20px;
+}
+
+table{
+    align-items: center;
+    margin-left: 180px;
+
+}
+
+td{
+    width: 120px;
+}
+
+tr{
+    height: 40px;
+}
+
+
+tr:nth-child(even){
+    background-color: lightgray;
+    
+}
