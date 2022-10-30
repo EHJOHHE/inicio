@@ -24,3 +24,5 @@ lteste= []
 # print(b)
 # print(lteste)
 
+if nome in lista:
+    erro

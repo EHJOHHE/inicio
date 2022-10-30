@@ -11,20 +11,23 @@ def asterisco():
 
 def interface():
     asterisco()
-    print('1 - ADICIONAR CARRO\n2 - EXCLUIR CARRO\n3- INFORMAÇÕES DOS CARRO\n4 - SAIR')
+    print('1 - ADICIONAR CARRO\n2 - EXCLUIR CARRO\n3 - INFORMAÇÕES DOS CARRO\n4 - SAIR')
     asterisco()
 
 
 def func_1():
     asterisco()
-    marca =input('DIGITE A MARCA DO SEU CARRO\n')
-    tempo_de_uso = input('QUANTOS ANOS ELE TEM\n')
-    cor = input('COR DO SEU CARRO\n')
-    armazen = (f'{marca} {tempo_de_uso} {cor} ')
-    lista.append(armazen)
-    armazen = ()
-    print('OBRIGADO PELA PARTICIPAÇÃO :)')
-
+    marca =input('DIGITE A MARCA DO SEU CARRO\n').upper()
+    try:
+        tempo_de_uso = int(input('QUANTOS ANOS ELE TEM\n'))
+        cor = input('COR DO SEU CARRO\n').upper()
+        armazen = (f'{marca} DE {2022 - tempo_de_uso} NA COR {cor} ')
+        lista.append(armazen)
+        armazen = ()
+        print('OBRIGADO PELA PARTICIPAÇÃO :)')
+    except ValueError:
+        print("POR FAVOR DIGITE QUANTOS ANOS ELE TEM OU DE QUANDO ELE É EM NÚMEROS")
+    
 
 def func_2():
     c = len(lista)
@@ -33,14 +36,17 @@ def func_2():
     else :
         x = int(input('DIGITE O NÚMERO DO CARRO PARA SER EXCLIDO\n'))
         lista.pop(x-1)
-        print(lista)
     
 
 def func_3():
     cont = 1
-    for index in lista:
-        print(f'{cont} - {index}')
-        cont = cont + 1
+    c = len(lista)
+    if c == 0:
+        print("CADASTRE UM CARRO")
+    else :
+        for index in lista:
+            print(f'{cont} - {index}')
+            cont = cont + 1
         
 while x == 1:
     interface()
