@@ -49,3 +49,7 @@ while x == 1:
         func_1()
     elif opção == 2:
         func_2()
+    elif opção == 3:
+        func_3()
+    elif opção == 4:
+        x = 0
