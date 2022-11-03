@@ -1,29 +1,43 @@
 <?php
 
-static $listaOpcoesValidas = [1, 2, 3, 4, 5];
+static $listaOpcoesValidas = [1, 2, 3, 4, 5, 6, 7];
 $AlunosMemory = [];
 $listaAlunos = [];
-$professor = [];
-$dinheiro = [];
-$pagar = [];
 $opcao = 0;
+$soma = 0;
+$somaA = 0;
 
-function dindin(){
-    global $dinheiro;
-    $dinheiro[] =[
-        
+function PagamentoDosProfessores(){
+    
+    global $soma;
+    global $somaA;
+    
+    if ($somaA >= $soma){
+        echo "Sim, vai dar para pagar os professores " . PHP_EOL;
+        readline("Enter, para continuar ");
 
-    ];
+    }else{
+            echo "Não, infelizmente o pagamento para os professores não sera possivel" . PHP_EOL;
+            readline("Enter, para continuar ");
+    }
+    
+
 
 }
 
-function CadastrarProfessor($nomeprof , $dindin){
-    	global $professor;
-        $professor[] = [
-            "Prof" => $nomeprof,
-            "Dindin" => $dindin,
-        ];
 
+
+function CadastrarProfessor(){
+        $nomeprof = readline("Digite o NOME do professor: ");
+        $dindin = readline("Digite o SALÁRIO do professor :");
+
+        global $soma;
+
+        $soma = $soma + $dindin;
+
+        echo $soma . PHP_EOL;
+        echo "Registro realizado com sucesso !!" . PHP_EOL;
+        readline("Enter, para continuar");
 }
 
 
@@ -53,17 +67,18 @@ function CadastrarAluno($nome, $turma, $curso, $mensalidade)
 
 function MenuCadastro()
 {
+    global $somaA;
+
     echo "===Menu Cadastro===" . PHP_EOL;
     
-    $nomeprof = readline("Digite o NOME do professor: ");
-    $dindin = readline("Digite o SALÁRIO do professor :");
     $nome = readline("Digite o NOME do aluno: ");
     $turma = readline("Digite a TURMA do aluno: ");
     $curso = readline("Digite o CURSO do aluno: ");
     $mensalidade = readline("Digite a mensalidade do aluno: ");
     popen('cls', 'w');
     CadastrarAluno($nome, $turma, $curso, $mensalidade);
-    CadastrarProfessor($nomeprof , $dindin);
+
+    $somaA = $somaA + $mensalidade;
 
     echo "Registro realizado com sucesso !!" . PHP_EOL;
     readline("Enter, para continuar");
@@ -147,6 +162,12 @@ function verificarOpcaoMenu($opcao)
         case 4:
             MenuAlterar();
             break;
+        case 5:
+            CadastrarProfessor();
+            break;
+        case 6:
+            PagamentoDosProfessores();
+            break;
         default:
             echo "Erro cód - 001: Não deveria chegar aqui o código" . PHP_EOL;
             break;
@@ -154,13 +175,15 @@ function verificarOpcaoMenu($opcao)
 }
 
 
-while ($opcao != 5) {
+while ($opcao != 7) {
     echo "====Menu====" . PHP_EOL;
     echo "1 - Cadastrar Aluno" . PHP_EOL;
     echo "2 - Listar os alunos" . PHP_EOL;
     echo "3 - Excluir Aluno" . PHP_EOL;
     echo "4 - Atualizar dados Aluno" . PHP_EOL;
-    echo "5 - Sair" . PHP_EOL;
+    echo "5 - Cadastra professor" . PHP_EOL;
+    echo "6 - Vai ter como pagar os professores" . PHP_EOL;
+    echo "7 - Sair" . PHP_EOL;
 
     $opcao = readline("Digite sua opção: ");
     popen('cls', 'w');
