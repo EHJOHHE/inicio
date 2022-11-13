@@ -75,7 +75,7 @@ def dialogo():
     print('|',aste2,'|',aste2,'|')
     time.sleep(4)
     print('|',aste2,'|',aste2,'|')
-    print(f'|{espa}NIX   :                 |{espa}VICTORIO:               |')
+    print(f'|{espa}NIX   :                 |{espa}VITÓRIO:               |')
     time.sleep(0.50)
     print(f'|{espa}OCULTISTA   DOENTE      |{espa}INVESTIGADOR BONITO     |\n|{espa}MEDICO DA ITALIA        |{espa}CABEÇA QUEBRADA         |')
     time.sleep(0.50)
@@ -87,7 +87,7 @@ def dialogo():
     time.sleep(4)
     print('|',aste2,'|')
     time.sleep(0.50)
-    print('| VITORIO : |')
+    print('| VICTOR : |')
     print('ERRO')
     time.sleep(10)
     
