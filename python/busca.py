@@ -18,9 +18,9 @@ def busca():
     info = int(input("Digite um número caso esse número\nesteja em nossa lista você ganha\nesses números são gerados automaticamente escolha:"))
     if info in a:
         print("Boa rapa c acertou!!!!")
-        print(f"essa aquie era a lista {a}")
+        print(f"essa aqui era a lista {a}")
     else:
         print("é falha meu consagrado!!")
-        print(f"essa aquie era a lista {a}")
+        print(f"essa aqui era a lista {a}")
         
 busca()

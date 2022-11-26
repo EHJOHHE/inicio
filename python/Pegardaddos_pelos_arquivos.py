@@ -34,7 +34,7 @@ def exibir_menu():
     criar_linha('*', QTDA_CARACTERES)
 
 def mostrar_dados():
-     if len(aluno_media) > 0:
+    if len(aluno_media) > 0:
          print("-" * QTDA_CARACTERES)
          print(f"\033[0;1;33mALUNOS CADASTRADOS = {len(aluno_media)}\033[m")
          print("-" * QTDA_CARACTERES)
@@ -42,7 +42,7 @@ def mostrar_dados():
             print(f"\033[0;1;33m {k} => {v}\033[m")
          print("-" * QTDA_CARACTERES)
          print()
-     else:
+    else:
          print("\033[0;1;33mNão existe aluno cadastrado!\033[m")
          print()
 
