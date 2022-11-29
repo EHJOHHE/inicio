@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@keyframes animacaoImg {
+  0% {
+    margin-top: -32%;
+  }
+
+  50% {
+    margin-top: -28%;
+  }
+
+  100% {
+    margin-top: -32%;
+  }
+}
+
+@keyframes piscada {
+  from {
+    border-right-color: white;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes texto {
+  from {
+    width: 0;
+  }
+  to {
+    width: 430px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-image: linear-gradient(45deg, #313359 48%, red);
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.barra {
+  background-color: rgba(255, 255, 255, 0.274);
+  width: 100vw;
+  height: 60px;
+  align-items: center;
+  text-align: center;
+}
+
+.items {
+  margin-left: 50%;
+  width: 50%;
+  display: flex;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  margin-top: 10px;
+  font-size: 18px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+
+a:hover {
+  color: #4bf2e2;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.inicio {
+  color: #4bf2e2;
+  margin-left: 15%;
+  margin-top: 19%;
+}
+
+h2
+h1
+h4 {
+  margin: 5px;
+}
+
+h1 {
+  border-right: white 2px solid;
+  width: 430px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: texto 4s steps(40) normal, piscada 500ms infinite normal;
+}
+
+img {
+  margin-left: 48%;
+  margin-top: -30%;
+  display: flex;
+  animation: animacaoImg 4s infinite normal;
+}
