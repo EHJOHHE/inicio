@@ -46,6 +46,9 @@ header {
 }
 
 .barra {
+    position: fixed;
+    top: 0;
+    left: 0;
   background-color: rgba(255, 255, 255, 0.274);
   width: 100vw;
   height: 60px;
@@ -89,9 +92,11 @@ a:hover {
 }
 
 .inicio {
+    position: absolute;
   color: #4bf2e2;
   margin-left: 15%;
   margin-top: 19%;
+  height: 500px;
 }
 
 h2
@@ -109,9 +114,21 @@ h1 {
   animation: texto 4s steps(40) normal, piscada 500ms infinite normal;
 }
 
-img {
-  margin-left: 48%;
-  margin-top: -30%;
+.hacker {
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 5%;
   display: flex;
   animation: animacaoImg 4s infinite normal;
+}
+
+.sobre-mim{
+    margin: 0;
+    background-color: #313359;
+    width: 100vw;
+    height: 100vh;
+}
+
+.img-rpg{
+    
 }
