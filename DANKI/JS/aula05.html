@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funções</title>
+
+    <style>
+        body{
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        // as funções são na pegada de python so mudar como chamar elas
+
+        {
+            function bom(){
+                console.log('booa');
+                console.log('----------')
+            }
+            bom();
+
+        }
+
+
+        {
+
+            function bom(a){
+                if (a == 1){
+                    return 2; // lembra que tudo que tiver depois de um return não vai ser printado e como 
+                            // return == um valor ele deve ser 'dado a uma variavel'
+                    console.log('a') // não vai ter o a
+                }else{
+                    return 3;
+                }
+            }
+
+            var chama = bom(1);
+            console.log(chama);
+
+        }
+
+            // continuação quase uma aula 06
+
+        {
+
+            var nun = function(){ // jeito novo hehe coisa novo bom bom
+                alert('chama function de jeito diferente')
+            }
+
+            nun();
+        }
+
+
+        {
+            // chama function logo depois de cria ela function sem nome
+
+            (function(){
+                console.log('meee');
+            })();
+        }
+
+
+    </script>
+    
+</body>
+</html>

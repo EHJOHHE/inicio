@@ -94,9 +94,14 @@
   }
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
+  cursor: pointer;
 }
 
 body {
@@ -113,6 +118,7 @@ header {
 }
 
 .barra {
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
@@ -124,7 +130,7 @@ header {
 }
 
 .logo {
-  position: absolute;
+  position: fixed;
   margin-top: -2%;
   margin-left: 3%;
   font-family: "Rubik Microbe", cursive;
@@ -525,8 +531,19 @@ footer {
   height: 35px;
   width: 35px;
 }
+.insta:hover{
+  margin-left: 5px;
+  height: 45px;
+  width: 45px;
+}
 
 .twi {
   height: 35px;
   width: 35px;
+}
+
+.twi:hover{
+  margin-right: 5px;
+  height: 45px;
+  width: 45px;
 }
