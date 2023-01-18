@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+
+    <style>
+        body{
+            background: black;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <script>
+        var data = new Date('12/24/2022'); // a data deve ser colocada em formato ingles mes/dia/ano
+
+        var data2 = new Date('12/31/2022');
+
+        var diferença = data2.getDate() - data.getDate()
+
+        alert('Faltam '+diferença+' para o ultimo dia de dezembro');
+
+    </script>
+
+</body>
+</html>

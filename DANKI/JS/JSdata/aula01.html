@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+
+    <style>
+        body{
+            background: black;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <script>
+
+        var date = new Date();
+
+        var resovendoIndice = parseInt(date.getMonth());
+
+        var mes = resovendoIndice+1;
+
+        alert('Estamos no mês :'+mes+' Hoje é dia :'+date.getDate()+' E agora são '+date.getHours()+':'+date.getMinutes());
+        /*
+        date.getMounth == O mes em numero por indice dezembro = 11
+        date.getDate == Pega o dia do mes
+        date.getHours == Pega as horas
+        date.getMinutes == Pega os minutos
+        */
+
+    </script>
+
+</body>
+</html>

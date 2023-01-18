@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promisse</title>
+</head>
+<body>
+    <main>
+
+    </main>
+    <script>
+        const mypromise = new Promise((resolve, reject)=>{
+            const nome = 'teteu';
+
+            if (nome === 'teteu'){
+                resolve('De cria!')
+            }else{
+                reject('NHE Deu merda!')
+            }
+        })
+
+        mypromise.then((data)=>{
+            console.log(data)
+        })
+
+
+        //encadeamento de then's
+
+
+        const mypromise2 = new Promise((resolve, reject)=>{
+            const nome = 'teteu';
+
+            if (nome === 'teteu'){
+                resolve('De cria!')
+            }else{
+                reject('NHE Deu merda!')
+            }
+        })
+
+        mypromise2
+        .then((data)=>{
+            return data.toLowerCase()
+        })
+        .then((letrasPequenas) => { 
+            console.log(letrasPequenas + ' letras minusculas')
+        })
+
+
+        // Retorno do catch
+
+
+        const mypromise3 = new Promise((resolve, reject)=>{
+            const nome = 'AAAAAAAAAA';
+
+            if (nome === 'teteu'){
+                resolve('De cria!')
+            }else{
+                reject('NHE Deu merda!')
+            }
+        })
+
+        mypromise3.then((data)=>{
+            console.log(data)
+        }).catch((err)=>{
+            console.log(err)
+        })
+
+
+        // promessa em cadeia com ALL
+
+
+        const p1 = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve('P1 foi!')
+            }, 2000)
+        })
+        const p2 = new Promise((resolve, reject)=>{
+            resolve('P2 foi!')
+        })
+        const p3 = new Promise((resolve, reject)=>{
+            resolve('P3 foi!')
+        })
+
+        const resolveAll = Promise.all([p1,p2,p3]).then((data)=>{
+            console.log(data)
+        })
+
+        console.log('promessa são a sicronas não rola o bagulho de ordem')
+
+        // promessa em cadeia com race 'corrida'
+
+
+        const p4 = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve('P4 foi!')
+            }, 2000)
+        })
+        const p5 = new Promise((resolve, reject)=>{
+            resolve('P5 foi!')
+        })
+        const p6 = new Promise((resolve, reject)=>{
+            resolve('P6 foi!')
+        })
+
+        const resolveAllRace = Promise.race([p4,p5,p6]).then((dataa)=>{
+            console.log(dataa)
+        })
+
+
+        //fetch resqust API github
+        //fetch API
+
+
+        const userName = 'matheusbattisti'
+
+        fetch(`https://api.github.com/users/${userName}`,{
+            method :'GET',
+            Headers : {
+                Accept : 'application/vnd.github.v3+json',
+            },
+        })
+        .then((response)=>{
+            console.log(typeof response)
+            console.log(response)
+            return response.json()
+        })
+        .then((dates)=>{
+            console.log(`Nome do cara : ${dates.name}`)
+        })
+        .catch((err)=>{
+            console.log(`Deu erro cara ${err}`)
+        })
+
+    </script>
+</body>
+</html>

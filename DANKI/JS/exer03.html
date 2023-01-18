@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background: black;
+        }
+    </style>
+
+</head>
+<body>
+    <script>
+        var numeroInicial = prompt('Digite o primeiro número:');
+        var operador = prompt('Digite o operador matemático entre : + - * /');
+
+        while(operador != '*' && operador != '-' && operador != '+' && operador != '/'){
+            alert('Pro favor coloque um dos sinais mostrados')
+            var operador = prompt('Digite o operador matemático entre : +,-,*,/');
+        };
+
+        var numeroFinal = prompt('Digite o segundo no número:');
+
+        numeroInicial = parseInt(numeroInicial); // parseInt == convesão de STR para INT
+        numeroFinal = parseInt(numeroFinal);
+
+        if(operador == '+'){
+            var conta = (numeroInicial + +numeroFinal);
+            alert('A soma de '+numeroInicial+' com '+numeroFinal+' é :'+conta);
+        }else if(operador == '-'){
+            var conta = (numeroInicial - numeroFinal);
+            alert('A subtração de '+numeroInicial+' e '+numeroFinal+' é :'+conta);
+        }else if(operador == '/'){
+            var conta = (numeroInicial / numeroFinal);
+            alert('A divisão entre '+numeroInicial+' e '+numeroFinal+' é :'+conta);
+        }else if(operador == '*'){
+            var conta = (numeroInicial * numeroFinal);
+            alert('A multiplicação de '+numeroInicial+' e '+numeroFinal+' é :'+conta);
+        }
+
+    </script>
+</body>
+</html>

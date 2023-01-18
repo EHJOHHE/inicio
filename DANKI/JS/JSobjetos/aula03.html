@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> orientação a objeto pratica</title>
+
+    <style>
+        body{
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*function Carro(marca,nome,cor){
+            
+            if(marca == undefined){
+                marca = 'coloca a marca'
+            };
+            if(nome == undefined){
+                nome = 'coloca o nome'
+            };
+            if(cor == undefined){
+                cor = 'coloca a cor'
+            };
+
+            this.marca = marca;
+            this.nome = nome;
+            this.cor = cor;
+        };
+        var marcaa = prompt('Qual a marca do seu carro:')
+        var nomee = prompt('Qual o nome do seu carro:')
+        var corr = prompt('Qual a cor do seu carro:')
+        
+        var carro = new Carro(marcaa,nomee,corr);
+
+        alert(carro.nome+' da '+carro.marca+' na cor:'+carro.cor+' foi registrado.');*/
+
+        //---------------------------------------------------------------------------
+        //                              Separação
+        //---------------------------------------------------------------------------
+
+        function Carro(marca,nome,cor){
+            
+            if(marca == undefined){
+                marca = 'coloca a marca'
+            };
+            if(nome == undefined){
+                nome = 'coloca o nome'
+            };
+            if(cor == undefined){
+                cor = 'coloca a cor'
+            };
+
+            this.marca = marca;
+            this.nome = nome;
+            this.cor = cor;
+
+            this.pecas = function(pecas){
+                return pecas;
+            };
+        };
+
+        function marcas(){
+            this.a = 'Lamborghini'
+            this.b = 'Renoult'
+            this.c = 'Corolinha bebi pouco'
+        };
+
+        var pecas = new marcas();
+
+        var carro = new Carro();
+
+        alert(carro.pecas(pecas).a)
+
+    </script>
+</body>
+</html>

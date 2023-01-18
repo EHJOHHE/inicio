@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var AnoDeNascimento = prompt('Por favor digite o seu ano de nascimento');
+        
+
+        while(AnoDeNascimento >= 2015){
+            alert('Por favor pare de brincadeira e coleque sua data de nascimento real:');
+            var AnoDeNascimento = prompt('Por favor digite o seu ano de nascimento');
+        };
+
+        var AnoAtual = prompt('Por favor digite o ano em que estamos');
+
+        while(AnoAtual <= AnoDeNascimento){
+            alert('Para com isso cara');
+            var AnoAtual = prompt('Por favor digite o ano em que estamos');
+        };
+        
+        var Idade = AnoAtual - AnoDeNascimento;
+
+        alert('Sua idade é :' +Idade);
+
+    </script>
+</body>
+</html>

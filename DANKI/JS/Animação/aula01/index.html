@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background: black;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            margin-left: 10px;
+        }
+
+        .animar{
+            transition: 1s;
+            margin-left: 90px;
+        }
+
+        .animar2{
+            transition: 1s;
+            margin-top: 90px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+<script>
+    var anin = document.querySelectorAll('.box')[0];
+
+    setTimeout(()=>{
+        anin.classList.add('animar');
+    },1000)
+
+    anin.addEventListener('click', ()=>{
+        anin.classList.add('animar2')
+    })
+    
+
+</script>
+</html>

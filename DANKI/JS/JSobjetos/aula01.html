@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+    <style>
+        body{
+            background: black;
+        }
+    </style>
+
+</head>
+<body>
+    <script>
+        // objeto com UM indice
+        var pessoa = {
+            'nome':'Paulo',
+            'idade':'17',
+            'trabalho':'Progamador',
+        };
+
+        console.log(pessoa.nome); // mostra paulo
+        console.log(pessoa.idade); // mostra 17
+        console.log(pessoa.trabalho); // mostra progamador
+
+        console.log('--------------------------------');
+
+        // objeto com MAIS DE UM indice
+        var pessoas = [{
+            'nome':'Rosa',
+            'idade':'74',
+            'trabalho':'Servidor público',
+        },
+        {
+            'nome':'Mailson',
+            'idade':'33',
+            'trabalho':'Uber'
+        },
+        ];
+
+        // por ter mais de um indice precisamos especificar antes de chamar
+
+        console.log(pessoas[0].nome);
+        console.log(pessoas[0].idade);
+        console.log(pessoas[0].trabalho);
+
+        console.log('--------------------------------');
+
+        console.log(pessoas[1].nome);
+        console.log(pessoas[1].idade);
+        console.log(pessoas[1].trabalho);
+
+        console.log('--------------------------------');
+
+        // mais um exemplo
+        var casa = {
+            'frente':'De ceramica com porta de aluminio',
+            'piso':'Todo de ceramica',
+            'paredes':'85% de tinta oléo amarela e 15% de ceramica branca e marrom',
+            'teto':'Geso'
+        };
+
+        console.log(casa.frente);
+        console.log(casa.piso);
+        console.log(casa.paredes);
+        console.log(casa.teto);
+    </script>
+</body>
+</html>

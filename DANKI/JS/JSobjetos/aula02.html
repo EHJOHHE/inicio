@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>orientaçaão a objetos</title>
+    
+    <style>
+        body{
+            background: black;
+        }
+    </style>
+
+</head>
+<body>
+
+    <script>
+        function Pessoa(){
+            this.nome = 'Paulo' // THIS.**** = artributo var let ou cons não fuciona tem que ser THIS
+        };
+
+        var pessoa = new Pessoa(); // isso == var pessoa = {'nome':'paulo'}; olhe a aula01
+
+        console.log(pessoa.nome);
+
+        { // podemos alter os valores
+
+            function Pessoa(){
+                this.nome = 'Paulo'
+            };
+    
+            var pessoa = new Pessoa(); 
+            
+            pessoa.nome = 'Mailson';
+
+            console.log(pessoa.nome);
+        }
+
+        { // de uma VAR com a mesma função
+            function Pessoa(){
+                this.nome = 'Paulo'
+            };
+    
+            var pessoa = new Pessoa(); 
+            var pessoa2 = new Pessoa();
+
+            pessoa.nome = 'Mailson';
+
+            console.log(pessoa2.nome); // mostrara paulo
+
+        }
+    </script>
+    
+</body>
+</html>

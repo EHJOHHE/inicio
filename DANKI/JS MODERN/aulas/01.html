@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT MODERNO</title>
+</head>
+<body>
+    <main>
+
+    </main>
+    <script>
+
+
+        {
+        //Template strings//
+
+        let fala = "caracol raivoso"
+
+        let conteudo ='salve galera do youtuuubeeeeeeee essa é a fala do nosso querido amigo'+fala;
+
+        //exemplo acima usando ASPAS OBS(quando a variavel é chamada o ${} não fuciona)//
+
+        let conteudo2 = `
+        salve galera do youtuuubeeeeeeee essa é a
+        fala do nosso querido amigo ${fala}
+        `;
+
+        console.log(conteudo2)
+
+        //exemplo acima usando crase//
+        }
+
+        {
+            //uso de chaves cria um escopo on as variaveis LET só existen no scopo//
+               
+            let nome = `marcos`;
+
+            console.log(nome)
+        }
+
+        {
+
+            //só pra confirma o uso do escopo//
+            let nome = `marcela`;
+
+            console.log(nome)
+        }
+
+        {
+            // function 0//
+
+            let pessoa = function(){ //function normal
+                alert('Pessoa 1')
+            }
+
+            /*pessoa();*/
+
+            let pessoa2 = ()=>{ //function 0
+                alert('Pessoa 2')
+            }
+
+            /*pessoa2();*/
+
+            //atribuindo paremetros//
+            
+            let test = (texto)=>{
+                alert(texto)
+            }
+
+            /*test=('salve');*/
+
+            let test2 = (nome,pessoa3)=>{
+                pessoa3(nome);
+            }
+
+            /*test2('julia',(nome)=>{
+                alert(nome);
+            });*/
+        }
+
+        {
+            //destructor//
+            //spread//
+
+            const pessoas = ['MARCOS','LUCIA','PEDRO'];
+
+            const [a,b,c] = pessoas; //as variaveis A B C recebem os valores da arrei pessoa de acordo com o indice//
+
+            /*alert(a)
+            alert(b)
+            alert(c)*/
+
+
+            const pessoa2 =['JULIA','MARCELA','LUCIANE','JADE'];
+
+            const [d,e,...f] = pessoa2; // a sintaxe ...f significa que a variavel f recebera todos os valores sobrando//
+
+            /*alert(d)
+            alert(e)
+            alert(f)*/
+
+            const nomes =[
+            {
+                nome:'zé'
+            },
+            
+            {
+                nome:'juju'
+            }
+
+            ];
+
+
+            const objetos = [...nomes,{ //quando a classe objetos é chama ela alem de mostra GUI tambem mostra todos os nome da classe NOMES
+                nome:'gui'
+            }];
+
+
+            console.log(objetos)
+
+        }
+        
+        {
+            //destructor//
+            //Rest//
+
+            //Rest consiste em usar o sread para ter valores infinitos em uma única varavel como se fosse uma arrei//
+
+            let nun = (...numeros)=>{
+                console.log(numeros);
+            }
+
+            nun(1,2,3,4,5,6,7,8,9,{nome:'trolage'});
+
+            
+        }
+    </script>
+</body>
+</html>

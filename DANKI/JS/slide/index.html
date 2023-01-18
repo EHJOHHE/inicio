@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slides</title>
+
+    <style>
+        .conteiner{
+            position:relative;
+            height: 500px;
+        }
+        .conteiner img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-left: 20%;
+            width: 800px;
+            height: 500px;
+            opacity: 0;
+            transition: 1s;
+        }
+        .bolas{
+            text-align: center;
+        }
+        .bola-sozinha{
+            margin: 0 8px;
+            cursor: pointer;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: gray;
+        }
+        .bola-ativa{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="conteiner">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ_U4Kis01-uo0Ys3mf_cBxwOQWKtAmHcakmRIXdR6x4XtCSoeIFhzDDZsWVg5bbT6FiA&usqp=CAU">
+            <img src="https://www.fotosdeamadoras.com/wp-content/uploads/2022/04/xvideos-milf-gostosa-10.jpg">
+            <img src="http://www.nudelas.com/posts/angulo-perfeito/315/angulo-perfeito-31.jpg">
+        </div>
+
+        <br>
+
+        <div class="bolas">
+            <div class="bola-sozinha bola-ativa"></div>
+            <div class="bola-sozinha"></div>
+            <div class="bola-sozinha"></div>
+        </div>
+    </main>
+    <script>
+        
+        var nunAntigo = 0;
+
+        var imagens = document.querySelectorAll('.conteiner img');
+
+        imagens.forEach((item,index)=>{
+            document.querySelectorAll('.bola-sozinha')[index]
+            .addEventListener('click',()=>{
+                let imagenAntiga = document.querySelectorAll('.conteiner img')[nunAntigo];
+                let imagenAtual = document.querySelectorAll('.conteiner img')[index];
+
+                document.querySelectorAll('.bola-sozinha')[nunAntigo]
+                .classList.remove('bola-ativa');
+
+                document.querySelectorAll('.bola-sozinha')[index]
+                .classList.add('bola-ativa');
+
+                imagenAntiga.style.opacity = 0;
+                imagenAtual.style.opacity = 1;
+
+                nunAntigo = index;
+
+            })
+        })
+
+    </script>
+</body>
+</html>

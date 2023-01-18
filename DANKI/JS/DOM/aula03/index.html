@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM por class</title>
+
+    <style>
+        body{
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </main>
+</body>
+<script>
+
+    var elemento = document.getElementsByClassName('box');
+
+    /*var el = elemento[0];
+
+    el.style.width = 100 +'px';
+    el.style.height = 100 +'px';
+    el.style.backgroundColor= 'green'*/
+
+    for(var i = 0; i < elemento.length; i++){
+
+        var el = elemento[i]
+
+        el.style.width = 100 +'px';
+        el.style.height = 90 +'px';
+        el.style.backgroundColor = 'green';
+        el.style.borderColor = 'red';
+        el.style.borderStyle = 'dotted';
+        el.style.borderWidth = 2 +'px';
+        el.style.marginLeft = 590 + 'px';
+        el.style.marginTop = 10 +'px';
+    }
+
+</script>
+</html>

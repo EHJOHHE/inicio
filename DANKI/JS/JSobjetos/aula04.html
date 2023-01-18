@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+
+    <style>
+        body{
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    
+        <script>
+
+            class Pet{
+                constructor(animal){ // CONSTURCTOR basicamente é uma função pra class
+                    this.animal = animal;
+                };
+
+                mostraAnimal(){
+                    return this.animal
+                };
+            };
+
+            class Dono extends Pet{ // EXTENDS  basicamente pega todos os metodos que temos na class pai (Pet)
+                constructor(animal,nome){
+                    super(animal)
+                    this.nome = nome
+                };
+
+            };
+
+            var pet = new Pet('Gato');
+
+            var dono = new Dono('Cachorro','Mailson');
+
+            alert(dono.animal);
+            alert(dono.nome);
+
+        </script>
+
+</body>
+</html>
